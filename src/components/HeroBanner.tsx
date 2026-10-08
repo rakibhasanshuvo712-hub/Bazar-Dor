@@ -31,7 +31,7 @@ const HeroBanner = () => {
           {/* CTA Button */}
           <div className="pt-2">
             <Link
-              href="/products"
+              href="/"
               className="inline-block bg-green-700 hover:bg-green-800 text-white font-medium px-6 py-3 rounded-lg shadow transition-colors text-sm"
             >
               সব পণ্য দেখুন
