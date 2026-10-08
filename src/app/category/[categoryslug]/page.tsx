@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 interface ProductChange {
   dir: "up" | "down" | "flat";
@@ -37,9 +38,6 @@ const CategoryProduct = async ({
   );
 
   const data: Product[] = await res.json();
-
-  console.log(data);
-  console.log(categoryslug);
 
   return (
     <div className="container mx-auto py-10">
@@ -97,6 +95,14 @@ const CategoryProduct = async ({
                 ? `▼ ${Math.abs(product.change.pct)}%`
                 : "— 0%"}
             </span>
+
+            {/* Fixed: Use capitalized <Link> */}
+            <Link
+              href={`/product/${product.id}`}
+              className="mt-4 block w-full rounded-lg bg-blue-600 px-4 py-2 text-center text-white hover:bg-blue-700"
+            >
+              বিস্তারিত দেখুন
+            </Link>
           </div>
         ))}
 
