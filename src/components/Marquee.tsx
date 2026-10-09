@@ -5,7 +5,7 @@ const ProductMarquee = async () => {
     let headlines: any[] = [];
 
     try {
-        const res = await fetch('https://api.api-store.workers.dev/api/bazardor/products', { cache: 'no-store' });
+        const res = await fetch('https://api.api-store.workers.dev/api/bazardor/products');
         const data = await res.json();
         
         // Adjust this line based on what your console.log shows (e.g., data.products or just data)

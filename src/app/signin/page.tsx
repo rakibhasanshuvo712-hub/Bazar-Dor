@@ -57,7 +57,7 @@ const SignInPage = () => {
   return (
     <div className="min-h-screen bg-[#f0f7f4] flex items-center justify-center px-4 py-12">
       <div className="w-full max-w-md">
-        {/* Header */}
+        
         <div className="text-center mb-8">
           <h1 className="text-3xl font-bold text-gray-900 mb-2">সাইন ইন</h1>
           <p className="text-sm text-gray-500">
@@ -68,7 +68,7 @@ const SignInPage = () => {
         {/* Card */}
         <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 sm:p-8">
           <form className="space-y-5" onSubmit={onSubmit}>
-            {/* Email */}
+            
             <div>
               <label
                 htmlFor="email"
@@ -86,7 +86,7 @@ const SignInPage = () => {
               />
             </div>
 
-            {/* Password */}
+            
             <div>
               <label
                 htmlFor="password"
@@ -104,14 +104,14 @@ const SignInPage = () => {
               />
             </div>
 
-            {/* Error message */}
+            
             {errorMsg && (
               <p className="text-sm text-red-600 bg-red-50 border border-red-100 rounded-xl px-4 py-2.5">
                 {errorMsg}
               </p>
             )}
 
-            {/* Submit Button */}
+            
             <button
               type="submit"
               disabled={loading}
@@ -121,7 +121,7 @@ const SignInPage = () => {
             </button>
           </form>
 
-          {/* Divider */}
+          
           <div className="relative my-6">
             <div className="absolute inset-0 flex items-center">
               <div className="w-full border-t border-gray-200"></div>
@@ -131,7 +131,7 @@ const SignInPage = () => {
             </div>
           </div>
 
-          {/* Social Buttons */}
+          
           <div className="grid grid-cols-2 gap-3">
           
 
@@ -163,7 +163,7 @@ const SignInPage = () => {
           </p>
         </div>
 
-        {/* Back to Home */}
+        
         <div className="mt-6 text-center">
           <Link
             href="/"

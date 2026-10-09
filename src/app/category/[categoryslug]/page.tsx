@@ -51,7 +51,7 @@ export default function CategoryProduct() {
       });
   }, [categoryslug]);
 
-  // Handle sort changes via URL search params
+  
   const handleSortChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const value = e.target.value;
     const currentParams = new URLSearchParams(searchParams.toString());
@@ -59,14 +59,14 @@ export default function CategoryProduct() {
     router.push(`?${currentParams.toString()}`);
   };
 
-  // Sort products based on current sort value
+  
   const sortedData = [...data].sort((a, b) => {
     if (sort === "low-to-high") {
       return a.today - b.today;
     } else if (sort === "high-to-low") {
       return b.today - a.today;
     }
-    return 0; // default order
+    return 0; 
   });
 
   if (loading) {
@@ -81,7 +81,7 @@ export default function CategoryProduct() {
     <div className="min-h-screen bg-[#F4F6F0] py-8 px-4 sm:px-6 lg:px-8 font-sans">
       <div className="container mx-auto space-y-6 max-w-7xl">
 
-        {/* Category Header Banner */}
+        
         {data.length > 0 && (
           <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 flex items-center gap-4">
             <div className="w-16 h-16 bg-gray-50 rounded-xl flex items-center justify-center text-3xl shadow-inner border border-gray-100">
@@ -98,7 +98,7 @@ export default function CategoryProduct() {
           </div>
         )}
 
-        {/* Sorting & Filter Bar */}
+        
         <div className="bg-white rounded-2xl p-4 shadow-sm border border-gray-100 flex flex-col sm:flex-row justify-between items-center gap-3 text-sm text-gray-500">
           <span>মোট {data.length}টি পণ্য দেখানো হচ্ছে</span>
           
@@ -116,7 +116,7 @@ export default function CategoryProduct() {
           </div>
         </div>
 
-        {/* Product Cards Grid */}
+        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {sortedData.map((product) => (
             <div
@@ -124,7 +124,7 @@ export default function CategoryProduct() {
               className="bg-white border border-gray-100 rounded-2xl p-5 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow"
             >
               <div>
-                {/* Top Section: Icon, Name & Unit */}
+                
                 <div className="flex items-start gap-3.5">
                   <div className="w-12 h-12 bg-gray-50 rounded-xl flex items-center justify-center text-2xl border border-gray-100 flex-shrink-0">
                     {product.image}
@@ -139,7 +139,7 @@ export default function CategoryProduct() {
                   </div>
                 </div>
 
-                {/* Price and Percentage Row */}
+                
                 <div className="mt-5 pt-4 border-t border-gray-50 flex items-end justify-between">
                   <div>
                     <span className="text-xs text-gray-400 block mb-0.5">
@@ -168,7 +168,7 @@ export default function CategoryProduct() {
                 </div>
               </div>
 
-              {/* Details Link Button */}
+              
               <Link
                 href={`/product/${product.id}`}
                 className="mt-5 block w-full rounded-xl bg-gray-900 hover:bg-gray-800 text-white py-2.5 text-center text-sm font-medium transition-colors"

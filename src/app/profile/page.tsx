@@ -9,11 +9,11 @@ const ProfilePage = () => {
     const { data: session, refetch } = authClient.useSession();
     const user = session?.user;
 
-    // নাম আপডেট করার জন্য স্টেট
+    
     const [name, setName] = useState(user?.name || '');
     const [loading, setLoading] = useState(false);
 
-    // সাইন আউট হ্যান্ডলার
+    
     const handleSignOut = async () => {
         await authClient.signOut({
             fetchOptions: {
@@ -24,7 +24,7 @@ const ProfilePage = () => {
         });
     };
 
-    // নাম আপডেট হ্যান্ডলার
+    
     const handleUpdateName = async (e: React.FormEvent) => {
         e.preventDefault();
         setLoading(true);
@@ -46,7 +46,7 @@ const ProfilePage = () => {
 
     return (
         <div className='p-6 max-w-2xl mx-auto space-y-6'>
-            {/* প্রোফাইল হেডার */}
+            
             <div className='flex items-center justify-between p-4 bg-base-100 shadow-md rounded-xl'>
                 <div className='flex items-center gap-4'>
                     <Link href={"/profile"}>
@@ -73,7 +73,7 @@ const ProfilePage = () => {
                 </button>
             </div>
 
-            {/* তথ্য আপডেট সেকশন */}
+            
             <div className='p-6 bg-base-100 shadow-md rounded-xl space-y-4'>
                 <h3 className='text-xl font-bold'>তথ্য</h3>
                 

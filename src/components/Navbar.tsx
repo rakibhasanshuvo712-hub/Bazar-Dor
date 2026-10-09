@@ -6,8 +6,7 @@ const Navbar = async () => {
 
   try {
     const res = await fetch(
-      "https://api.api-store.workers.dev/api/bazardor/categories",
-      { cache: "no-store" }
+      "https://api.api-store.workers.dev/api/bazardor/categories"
     );
 
     if (!res.ok) {
@@ -27,7 +26,7 @@ const Navbar = async () => {
   return (
     <div>
       {navs.length > 0 ? (
-        navs.map((n, i) => (
+        navs.map((n: any, i: any) => (
           <Link
             key={i}
             href={`/category/${n.slug}`}

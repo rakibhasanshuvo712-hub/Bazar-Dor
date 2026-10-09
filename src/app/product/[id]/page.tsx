@@ -58,7 +58,7 @@ const ProductDetails = async ({ params }: ProductDetailsProps) => {
     <div className="min-h-screen bg-gray-50 py-8 px-4 sm:px-6 lg:px-8 font-sans">
       <div className="max-w-5xl mx-auto space-y-8">
         
-        {/* Breadcrumb */}
+        
         <nav className="text-sm text-gray-500 flex items-center space-x-2">
           <Link href="/" className="hover:underline">হোম</Link>
           <span>›</span>
@@ -67,7 +67,7 @@ const ProductDetails = async ({ params }: ProductDetailsProps) => {
           <span className="text-gray-900 font-medium">{product.nameBn}</span>
         </nav>
 
-        {/* Top Header Card */}
+        
         <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
           <div className="flex items-center gap-4">
             <div className="w-16 h-16 bg-gray-100 rounded-xl flex items-center justify-center text-3xl shadow-inner">
@@ -92,7 +92,7 @@ const ProductDetails = async ({ params }: ProductDetailsProps) => {
           </div>
         </div>
 
-        {/* Price Summary Cards */}
+        
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           <div className="bg-white p-4 rounded-xl border border-gray-100 shadow-sm">
             <span className="text-xs text-gray-500 block">সর্বনিম্ন দাম</span>
@@ -111,7 +111,7 @@ const ProductDetails = async ({ params }: ProductDetailsProps) => {
           </div>
         </div>
 
-        {/* Market-wise Table */}
+        
         <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
           <div className="p-5 border-b border-gray-100">
             <h2 className="text-lg font-bold text-gray-900">বাজারভিত্তিক আজকের দাম</h2>

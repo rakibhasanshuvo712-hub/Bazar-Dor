@@ -86,7 +86,7 @@ const SignUpPage = () => {
   return (
     <div className="min-h-screen bg-[#f0f7f4] flex items-center justify-center px-4 py-12">
       <div className="w-full max-w-md">
-        {/* Header */}
+        
         <div className="text-center mb-8">
           <h1 className="text-3xl font-bold text-gray-900 mb-2">
             সাইন আপ
@@ -98,10 +98,10 @@ const SignUpPage = () => {
           </p>
         </div>
 
-        {/* Card */}
+        
         <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 sm:p-8">
           <form className="space-y-5" onSubmit={onSubmit}>
-            {/* Name */}
+            
             <div>
               <label
                 htmlFor="name"
@@ -121,7 +121,7 @@ const SignUpPage = () => {
               />
             </div>
 
-            {/* Image URL */}
+            
             <div>
               <label
                 htmlFor="imageURL"
@@ -139,7 +139,7 @@ const SignUpPage = () => {
               />
             </div>
 
-            {/* Email */}
+            
             <div>
               <label
                 htmlFor="email"
@@ -159,7 +159,7 @@ const SignUpPage = () => {
               />
             </div>
 
-            {/* Password */}
+            
             <div>
               <label
                 htmlFor="password"
@@ -180,7 +180,7 @@ const SignUpPage = () => {
               />
             </div>
 
-            {/* Confirm Password */}
+            
             <div>
               <label
                 htmlFor="confirmPassword"
@@ -201,7 +201,7 @@ const SignUpPage = () => {
               />
             </div>
 
-            {/* Error Message */}
+            
             {errorMsg && (
               <p
                 role="alert"
@@ -211,7 +211,7 @@ const SignUpPage = () => {
               </p>
             )}
 
-            {/* Submit Button */}
+            
             <button
               type="submit"
               disabled={loading || socialLoading}
@@ -223,7 +223,7 @@ const SignUpPage = () => {
             </button>
           </form>
 
-          {/* Divider */}
+          
           <div className="relative my-6">
             <div className="absolute inset-0 flex items-center">
               <div className="w-full border-t border-gray-200" />
@@ -236,10 +236,10 @@ const SignUpPage = () => {
             </div>
           </div>
 
-          {/* Social Buttons */}
+          
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             
-            {/* GitHub */}
+            
             <button
               type="button"
               disabled={loading || socialLoading}
@@ -267,7 +267,7 @@ const SignUpPage = () => {
             </button>
           </div>
 
-          {/* Sign In Link */}
+          
           <p className="mt-6 text-center text-sm text-gray-500">
             ইতিমধ্যে অ্যাকাউন্ট আছে?{" "}
             <Link
@@ -279,7 +279,7 @@ const SignUpPage = () => {
           </p>
         </div>
 
-        {/* Back to Home */}
+        
         <div className="mt-6 text-center">
           <Link
             href="/"

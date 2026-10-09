@@ -35,7 +35,7 @@ export default async function Home() {
 
       <div className="container mx-auto px-4">
 
-        {/* দাম বেড়েছে */}
+        
         <div className="py-10">
           <p className="text-xl font-bold mb-5">
             ▲ আজ দাম বেড়েছে
@@ -80,7 +80,7 @@ export default async function Home() {
           </div>
         </div>
 
-        {/* দাম কমেছে */}
+        
         <div className="py-10">
           <p className="text-xl font-bold mb-5">
             ▼ আজ দাম কমেছে
@@ -125,7 +125,7 @@ export default async function Home() {
           </div>
         </div>
 
-        {/* সব পণ্য */}
+        
         <div className="py-10">
           <p className="text-2xl font-bold">
             সব পণ্য
