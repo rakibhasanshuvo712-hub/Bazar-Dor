@@ -39,15 +39,15 @@ const HeroBanner = () => {
           </div>
         </div>
 
-        {/* Right Illustration / Image */}
+        
         <div className="mt-6 md:mt-0 flex justify-center items-center">
           <div className="relative w-64 h-52 md:w-80 md:h-64 flex items-center justify-center">
             <div className="text-6xl flex items-center gap-2">
                <Image
-                            className="w-6 h-6"
-                            height={400}
-                            width={300}
-                            src="/public/bazar-hero.png"
+                            className=" w-max "
+                            height={500}
+                            width={400}
+                            src="/bazar-hero.png"
                             alt="Logo"
                           />
                         
