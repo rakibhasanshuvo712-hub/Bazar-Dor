@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import Navbar from "./Navbar";
-
 
 const Header = () => {
   const date = new Date().toLocaleDateString("bn-BD", {
@@ -28,19 +28,24 @@ const Header = () => {
           </div>
         </div>
 
-        
+        {/* Right side - Auth Buttons with Link */}
         <div className="flex gap-3">
-          <button className="px-4 py-2 border border-gray-300 rounded-md text-sm hover:bg-gray-50">
+          <Link
+            href="/signin"
+            className="px-4 py-2 border border-gray-300 rounded-md text-sm hover:bg-gray-50 font-medium text-center inline-flex items-center"
+          >
             সাইন ইন
-          </button>
-          <button className="px-4 py-2 bg-green-600 text-white rounded-md text-sm hover:bg-green-700">
+          </Link>
+          <Link
+            href="/signup"
+            className="px-4 py-2 bg-green-600 text-white rounded-md text-sm hover:bg-green-700 font-medium text-center inline-flex items-center"
+          >
             সাইন আপ
-          </button>
+          </Link>
         </div>
-        
       </div>
       <div className="justify-center text-center">
-      <Navbar />
+        <Navbar />
       </div>
     </div>
   );
