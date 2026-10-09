@@ -49,7 +49,11 @@ const SignInPage = () => {
 
   const inputClass =
     "w-full px-4 py-2.5 rounded-xl border border-gray-200 bg-white text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500/40 focus:border-emerald-500 transition";
-
+   const handleGithubSignIn= async()=>{
+    const data= await authClient.signIn.social({
+      provider: "github"
+    })
+   }
   return (
     <div className="min-h-screen bg-[#f0f7f4] flex items-center justify-center px-4 py-12">
       <div className="w-full max-w-md">
@@ -143,9 +147,9 @@ const SignInPage = () => {
               Google দিয়ে চালিয়ে যান
             </button>
 
-            <button
+            <button onClick={handleGithubSignIn}
               type="button"
-              onClick={() => socialSignIn("github")}
+              
               className="flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl border border-gray-200 bg-white hover:bg-gray-50 text-sm font-medium text-gray-700 transition"
             >
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
